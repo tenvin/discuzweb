@@ -1,0 +1,17 @@
+{% from "macro/_formhelpers.html" import render_field %}
+
+<form method=post action="/add2">
+    {{ form.hidden_tag() }}
+  <dl>
+    {{ render_field(form.url) }}
+    {{ render_field(form.user) }}
+    {{ render_field(form.password) }}
+  </dl>
+  <p><input type=submit value=add>
+</form>
+
+<ul class="entries">
+    {% for entry in entries %}
+        <li>{{ entry.url }}
+    {% endfor %}
+</ul>

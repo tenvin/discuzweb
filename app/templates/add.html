@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Add</title>
 </head>
 <body>
 <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
@@ -15,6 +15,7 @@
         <dd><input type="password" name="password">
         <dd><input type="submit" value="add">
     </dl>
+
 </form>
 <ul class="entries">
     {% for entry in entries %}
